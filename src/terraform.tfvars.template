@@ -1,0 +1,12 @@
+region              = "ap-southeast-1"
+availability_zone   = "ap-southeast-1a"
+ami                 = "ami-0fed77069cd5a6d6c"
+bucket_name         = "bucket_name"
+database_name       = "database_name"
+database_user       = "database_user"
+database_pass       = "database_pass"
+admin_user          = "admin_user"
+admin_pass          = "admin_pass"
+
+//PUBLIC KEY FOR DEBUGGING TOOL
+PUBLIC_KEY_SSH      = "KEY"
