@@ -7,7 +7,7 @@ resource "aws_network_interface" "app_public" {
 }
 
 resource "aws_network_interface" "app_private" {
-  subnet_id       = aws_subnet.app_db_private
+  subnet_id       = aws_subnet.app_db_private.id
   # security_groups = [aws_security_group.web.id]
 
   tags = {
@@ -16,7 +16,7 @@ resource "aws_network_interface" "app_private" {
 }
 
 resource "aws_network_interface" "db_app_private" {
-  subnet_id       = aws_subnet.app_db_private
+  subnet_id       = aws_subnet.app_db_private.id
   # security_groups = [aws_security_group.web.id]
 
   tags = {
@@ -25,7 +25,7 @@ resource "aws_network_interface" "db_app_private" {
 }
 
 resource "aws_network_interface" "db_private" {
-  subnet_id       = aws_subnet.app_db_private
+  subnet_id       = aws_subnet.db_private.id
   # security_groups = [aws_security_group.web.id]
 
   tags = {
