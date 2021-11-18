@@ -29,6 +29,6 @@ resource "aws_network_interface" "db_private" {
   # security_groups = [aws_security_group.web.id]
 
   tags = {
-    Name = "db_to_app_network_interface"
+    Name = "db_private_network_interface"
   }
 }
