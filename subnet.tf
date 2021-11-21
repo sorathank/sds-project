@@ -2,6 +2,9 @@ resource "aws_subnet" "public" {
   vpc_id     = aws_vpc.main.id
   cidr_block = "10.0.1.0/24"
   availability_zone = var.availability_zone
+  depends_on = [
+        aws_internet_gateway.igw
+    ]
   tags = {
     Name = "public_subnet"
   }
